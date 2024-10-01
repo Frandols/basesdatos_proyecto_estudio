@@ -13,7 +13,15 @@
 - De Los Santos, Francisco
 - Echeverria, Theo
 
+**Profesor**: Walter Vallejos
+
+**Institucion**: Universidad Nacional del Nordeste
+
+**Carrera**: Licenciatura en Sistemas de Informacion
+
 **Año**: 2024
+
+**Fecha**: 2/10/2024
 
 ## CAPÍTULO I: INTRODUCCIÓN
 
