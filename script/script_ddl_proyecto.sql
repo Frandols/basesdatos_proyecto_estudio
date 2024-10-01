@@ -82,7 +82,7 @@ CREATE TABLE Presupuestos
   idPresupuesto INT NOT NULL,
   detalles VARCHAR NOT NULL,
   monto FLOAT NOT NULL,
-  aprobado INT NOT NULL,
+  aprobado BIT NOT NULL,
   idRevision INT NOT NULL,
   PRIMARY KEY (idPresupuesto),
   FOREIGN KEY (idRevision) REFERENCES Revisiones(idEquipo)
