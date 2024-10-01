@@ -93,6 +93,10 @@ PRODUCT  ||--o{  ORDER-ITEM  : "ordered in"
 
 Acceso al documento [PDF](doc/diccionario_datos.pdf) del diccionario de datos.
 
+### Script de generacion de la tabla
+
+Acceso al documento [PDF](script/script_ddl_proyecto.sql) del script.
+
 ### Desarrollo TEMA 1 "----"
 
 Fusce auctor finibus lectus, in aliquam orci fermentum id. Fusce sagittis lacus ante, et sodales eros porta interdum. Donec sed lacus et eros condimentum posuere.
