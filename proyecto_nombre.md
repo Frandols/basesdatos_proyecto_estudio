@@ -93,9 +93,9 @@ PRODUCT  ||--o{  ORDER-ITEM  : "ordered in"
 
 Acceso al documento [PDF](doc/diccionario_datos.pdf) del diccionario de datos.
 
-### Script de generacion de la tabla
+### Script de definicion de datos
 
-Acceso al documento [PDF](script/script_ddl_proyecto.sql) del script.
+Acceso al documento [SQL](script/script_ddl_proyecto.sql) del script.
 
 ### Desarrollo TEMA 1 "----"
 
