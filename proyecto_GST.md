@@ -117,8 +117,10 @@ Nunc sollicitudin purus quis ante sodales luctus. Proin a scelerisque libero, vi
 
 ## BIBLIOGRAFÍA DE CONSULTA
 
-1.  List item
-2.  List item
-3.  List item
-4.  List item
-5.  List item
+# TEMA 2
+https://learn.microsoft.com/es-es/sql/t-sql/language-reference?view=sql-server-ver15
+https://learn.microsoft.com/es-es/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver16
+https://learn.microsoft.com/es-es/sql/relational-databases/user-defined-functions/user-defined-functions?view=sql-server-ver15
+https://learn.microsoft.com/es-es/sql/relational-databases/stored-procedures/create-a-stored-procedure?view=sql-server-ver16
+https://learn.microsoft.com/en-us/sql/relational-databases/user-defined-functions/create-user-defined-functions-database-engine?view=sql-server-ver16
+
