@@ -68,12 +68,11 @@ Ut sed imperdiet risus. Maecenas vestibulum arcu vitae orci pretium pharetra. Su
         -	Una función siempre devuelve un valor, a diferencia de los procedimientos almacenados, que pueden no devolver nada.
         -	Las funciones pueden usarse directamente en consultas SQL (como en SELECT, WHERE, etc.), mientras que los procedimientos almacenados no pueden.
         -	Una función puede devolver un solo valor de tipo de datos o una tabla (en el caso de las funciones de tipo tabla).
-
-**TIPOS**
-
+    
+***TIPOS***
+  
   ****Procedimientos Almacenados****
-
-   ****Procedimientos almacenados del usuario****
+   Procedimientos almacenados del usuario
     - Son procedimientos definidos por el usuario y se diseñaron para realizar tareas específicas en la base  de datos. Son los más comunes y los que usualmente 
        se crean para manejar operaciones en la base de datos como insertar, actualizar, eliminar o consultar datos.
       
