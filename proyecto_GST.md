@@ -69,9 +69,9 @@ Ut sed imperdiet risus. Maecenas vestibulum arcu vitae orci pretium pharetra. Su
         -	Las funciones pueden usarse directamente en consultas SQL (como en SELECT, WHERE, etc.), mientras que los procedimientos almacenados no pueden.
         -	Una función puede devolver un solo valor de tipo de datos o una tabla (en el caso de las funciones de tipo tabla).
     
-TIPOS
+***TIPOS***
 
-Procedimientos Almacenados
+****Procedimientos Almacenados****
  
 	Procedimientos almacenados del usuario 
 		- Son procedimientos definidos por el usuario y se diseñaron para realizar tareas específicas en la base de datos. Son los más comunes y los 	que usualmente se crean para manejar operaciones en la base de datos como insertar, actualizar, eliminar o consultar datos.
@@ -88,7 +88,7 @@ Procedimientos Almacenados
 	Procedimientos Extendidos Definidos por el Usuario 
 		- Los procedimientos extendidos definidos por el usuario son bibliotecas externas (DLL) que puedes cargar y ejecutar desde SQL Server. Estos procedimientos permiten 			realizar operaciones más complejas que no se pueden hacer directamente con Transact-SQL.
 
-Funciones Almacenadas
+****Funciones Almacenadas****
 
 	Funciones escalares 
 		- Descripción: Las funciones escalares son las más comunes. Devuelven un único valor de un tipo de datos específico (como int, varchar, date, etc.). Uso: Se utilizan en 		consultas para devolver un valor calculado. Por ejemplo, una función que calcule el salario total de un empleado sumando varias columnas.
@@ -99,7 +99,7 @@ Funciones Almacenadas
 	Funciones agregadas 
 		- Descripción: Son funciones que realizan una operación de agregación, como contar, promediar, sumar, encontrar el máximo o el mínimo. Uso: Se utilizan para realizar 			cálculos agregados dentro de una consulta.
 
-VENTAJAS
+***VENTAJAS***
 
 Procedimientos y Funciones Almacenadas
 
