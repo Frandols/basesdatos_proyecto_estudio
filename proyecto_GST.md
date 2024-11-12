@@ -168,11 +168,13 @@ Fusce auctor finibus lectus, in aliquam orci fermentum id. Fusce sagittis lacus 
 
 > Acceder a la siguiente carpeta para la descripción completa del tema [scripts-> tema_1](script/tema01_nombre_tema)
 
-### Desarrollo TEMA 2 "----"
+### Desarrollo TEMA 2 "Procedimientos y Funciones Almacenadas"
 
-Proin aliquet mauris id ex venenatis, eget fermentum lectus malesuada. Maecenas a purus arcu. Etiam pellentesque tempor dictum.
+En esta sección se colocará un documento el cual se enseña como crear funciones y procedimientos almacenados, además de que se colocaran los archivos .SQL donde estaran los códigos pedidos como tarea y un archivo que se utilizará para la exposición
 
-> Acceder a la siguiente carpeta para la descripción completa del tema [scripts-> tema_2](script/tema02_nombre_tema)
+> Documento sobre procedimientos y funciones almacenadas [DOCX]()
+> Scripts utilizados para la exposición [scripts-> tema_2](script/tema02_nombre_tema)
+> Archivo utilizado para la presentación
 
 ...
 
