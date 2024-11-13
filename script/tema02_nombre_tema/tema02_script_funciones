@@ -1,0 +1,40 @@
+USE [GST_BDD]
+GO
+
+/****** Object:  UserDefinedFunction [dbo].[devolver_estado_equipo]    Script Date: 11/12/2024 9:29:17 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Theo
+-- Create date: 12/11/2024
+-- Description:	Esta función devuelve el  estado de un equipo, recibiendo como parámetro un numero de serie
+-- =============================================
+CREATE FUNCTION [dbo].[devolver_estado_equipo] 
+(
+	-- Add the parameters for the function here
+	@numeroSerie varchar(256)
+)
+RETURNS varchar(100)
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @descripcionEstado varchar(100)
+
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @descripcionEstado = es.descripcion
+	FROM Equipos eq
+	JOIN Estados es ON eq.estado = es.idEstado
+	WHERE eq.numeroDeSerie = @numeroSerie;
+
+
+	-- Return the result of the function
+	RETURN @descripcionEstado
+
+END
+GO
+
+--=============================================================================================================================================================
