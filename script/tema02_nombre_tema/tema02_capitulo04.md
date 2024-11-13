@@ -54,6 +54,43 @@ Existen dos maneras de ejecutar nuestro procedimiento. Desde una Query, o desde 
 -	Desde el explorador de objetos: Vamos a dar click derecho a nuestro procedimiento creado y presionar en Execute Store Procedure. En la columna Value vamos a colocar los valores que queremos guardar en los respectivos atributos. Luego presionamos Ok y se agregará un nuevo cliente (en este caso).
 
 ![image](https://github.com/user-attachments/assets/32f7ffb8-cdd0-47d1-bc85-41fab608aa71)
+
+
+***CREACIÓN DE FUNCIONES ALMACENADAS***
+
+1.	Abrimos el código generador de la función
+Vamos a crear una conexión->Acceder al explorador de objetos->Clickeamos en la base de datos en cual queremos crear la función->Programmability-> click derecho en la carpeta Functions->New->Seleccionamos el tipo de función que queremos crear
+
+![image](https://github.com/user-attachments/assets/eb65dfcd-0195-4eb9-83c6-5e4d775f8565)
+
+2.	Editar la información de nuestra función
+Procedemos a una vez estando con el código abierto, acceder a Query->Specify Values for Template Parameters. Vamos a modificar el autor, la fecha, la descripción y el nombre de nuestra función
+
+![image](https://github.com/user-attachments/assets/f32567e6-ee96-4180-b4ee-d3ccc05b0253)
+![image](https://github.com/user-attachments/assets/36554388-2cab-4a37-9dbb-67df98ef17aa)
+
+3.	Modificar la función
+Ahora procederemos a crear la función teniendo en cuenta la manera en la que se construye la función como se observa en la imagen
+
+![image](https://github.com/user-attachments/assets/18a38a96-8c19-4249-9163-e6f2b1adcb61)
+
+Quedando:
+
+![image](https://github.com/user-attachments/assets/b4e22415-b561-47a9-9283-56b8f1d1d991)
+
+4.	Ejecutamos el código
+
+5.	Llamamos a la función
+Para llamar a la función que creamos, en este caso se llamaría con la sentencia SELECT, el nombre de la función y entre paréntesis el parámetro, quedando de ésta forma
+
+![image](https://github.com/user-attachments/assets/3648d31b-ab68-4a24-989b-37fa02d21b71)
+
+
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/f5df8bf2-bb68-4818-a5b5-948055027ed9)
 
 
