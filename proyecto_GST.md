@@ -230,9 +230,13 @@ Fusce auctor finibus lectus, in aliquam orci fermentum id. Fusce sagittis lacus 
 
 En esta sección se colocará un documento el cual se enseña como crear funciones y procedimientos almacenados, además de que se colocaran los archivos .SQL donde estaran los códigos pedidos como tarea y un archivo que se utilizará para la exposición
 
-> Documento sobre procedimientos y funciones almacenadas [DOCX]()
-> Scripts utilizados para la exposición [scripts-> tema_2](script/tema02_nombre_tema)
-> Archivo utilizado para la presentación
+
+> Scripts utilizados para la exposición - Funciones: [scripts-> capitulo 4](script/tema02_nombre_tema/tema02_capitulo_02)
+
+> Scripts utilizados para la exposición - Funciones: [scripts-> funciones](script/tema02_nombre_tema/tema02_script_funciones)
+
+>  Scripts utilizados para la exposición - Procedimientos: [scripts-> procedimientos](script/tema02_nombre_tema/tema02_script_procedimientos)
+
 
 ### Desarrollo TEMA 3 "Optimización de Consultas a través de índices"
 
