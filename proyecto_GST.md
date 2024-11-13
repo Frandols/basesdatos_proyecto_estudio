@@ -231,11 +231,11 @@ Acceso al documento [PDF](doc/diccionario_datos.pdf) del diccionario de datos.
 
 Acceso al documento [SQL](script/script_ddl_proyecto.sql) del script.
 
-### Desarrollo TEMA 1 "----"
+### Desarrollo TEMA 1 "Manejo de permisos a nivel de usuarios de base de datos"
 
-Fusce auctor finibus lectus, in aliquam orci fermentum id. Fusce sagittis lacus ante, et sodales eros porta interdum. Donec sed lacus et eros condimentum posuere.
+En el siguiente enlace está contenido el desarrollo del tema 1
 
-> Acceder a la siguiente carpeta para la descripción completa del tema [scripts-> tema_1](script/tema01_nombre_tema)
+> Acceder a la siguiente carpeta para la descripción completa del tema [scripts-> tema_1](script/tema01_Manejo_De_Permisos)
 
 ### Desarrollo TEMA 2 "Procedimientos y Funciones Almacenadas"
 
