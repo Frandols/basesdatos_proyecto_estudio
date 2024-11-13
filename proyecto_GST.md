@@ -47,9 +47,37 @@ Dado a que el negocio actualmente gestiona su flujo de trabajo a traves del uso 
 
 ## CAPITULO II: MARCO CONCEPTUAL O REFERENCIAL
 
-### **TEMA 1 " ---- "**
+### **TEMA 1 " Manejo de permisos a nivel de usuarios  "**
 
-Ut sed imperdiet risus. Maecenas vestibulum arcu vitae orci pretium pharetra. Suspendisse potenti. Fusce massa libero, fermentum eget elit in, tincidunt fermentum nunc. Cras imperdiet nisl elit, elementum gravida enim accumsan vel. Sed in sapien quis ante consectetur commodo id non nulla. Aenean lacinia, dolor convallis semper mattis, ante orci elementum nunc, eget feugiat risus neque in urna. Ut ut quam nec risus mollis convallis ornare ac odio. Phasellus efficitur posuere nibh, eget tempor augue pellentesque ac. Ut enim sem, imperdiet non est ut, blandit posuere dui. Curabitur at purus orci. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+- En el tema 1 abordamos el manejo de los permisos en nuestra base de datos
+- A continuacion una  introduccion sobre el tema 
+
+El manejo de permisos en una base de datos es muy importante para garantizar la seguridad, confidencialidad y control de acceso a la información almacenada. Se refiere a la capacidad de controlar qué usuarios o aplicaciones pueden acceder, modificar o realizar otras operaciones sobre los datos. 
+
+**Usuarios y roles**
+- Usuarios: Son las cuentas individuales creadas que pueden autenticarse para interactuar con los distintos objetos de la base de datos (tablas, procedimientos, etc.), este nivel de control es esencial para proteger los datos y definir las responsabilidades y el alcance de cada usuario dentro del sistema.
+- Roles: Los roles actúan como contenedores de permisos que pueden asignarse a múltiples usuarios, lo cual facilita la administración, especialmente en bases de datos con un gran número de usuarios y necesidades de permisos variadas.
+
+**Tipos de Permisos**
+Existen distintos tipos de permisos que pueden ser otorgados a nivel de distintos objetos de nuestra base de datos, es decir, permitir o restringir acciones que un usuario puede realizar sobre cada uno de estos componentes de manera detallada.
+
+**Permisos de control de datos**
+- SELECT: Este comando se utiliza para consultar o recuperar datos de una tabla en la base de datos.
+- DELETE: Se usa para eliminar registros de una tabla.
+- INSERT: Este comando se emplea para agregar nuevos registros a una tabla.
+- UPDATE: Se utiliza para modificar los datos existentes en una tabla.
+
+**Permisos de ejecucion y uso de objetos**
+- EXECUTE: Este permiso permite ejecutar procedimientos almacenados, funciones y otros objetos de programa en la base de datos
+- REFERENCES: Este permiso permite referenciar objetos como tablas o vistas en claves externas (foreign keys) o en otros tipos de relaciones.
+
+**Permisos de control de estructura:**
+- CREATE: Este comando crea un nuevo objeto en la base de datos, como una tabla, vista, procedimiento almacenado
+- ALTER: Este comando se usa para modificar un objeto existente en la base de datos.
+- DROP: Este comando se utiliza para eliminar un objeto existente en la base de datos, como una tabla, vista, índice, o procedimiento almacenado.
+
+**Permisos de administracion**
+- GRANT: Permite especificar permisos para realizar acciones (como SELECT, INSERT, UPDATE, etc.) en objetos específicos de la base de datos.
 
 ### **TEMA 2 " Procedimientos y Funciones Almacenadas "**
 
