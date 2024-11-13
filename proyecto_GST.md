@@ -239,14 +239,10 @@ Fusce auctor finibus lectus, in aliquam orci fermentum id. Fusce sagittis lacus 
 
 ### Desarrollo TEMA 2 "Procedimientos y Funciones Almacenadas"
 
-En esta sección se colocará un documento el cual se enseña como crear funciones y procedimientos almacenados, además de que se colocaran los archivos .SQL donde estaran los códigos pedidos como tarea.
+En esta sección se colocará un documento el cual se enseña como crear funciones y procedimientos almacenados.
 
 
-> Scripts utilizados para la exposición - Capitulo 4: [scripts-> capitulo 4](script/tema02_nombre_tema/tema02_capitulo_04.md)
-
-> Scripts utilizados para la exposición - Funciones: [scripts-> funciones](script/tema02_nombre_tema/tema02_script_funciones)
-
->  Scripts utilizados para la exposición - Procedimientos: [scripts-> procedimientos](script/tema02_nombre_tema/tema02_script_procedimientos)
+> Acceder a la siguiente carpeta para la descripción completa del tema - Capitulo 4: [scripts-> capitulo 4](script/tema02_nombre_tema/tema02_capitulo_04.md)
 
 
 ### Desarrollo TEMA 3 "Optimización de Consultas a través de índices"
