@@ -267,6 +267,13 @@ Nunc sollicitudin purus quis ante sodales luctus. Proin a scelerisque libero, vi
 - https://learn.microsoft.com/es-es/sql/relational-databases/stored-procedures/create-a-stored-procedure?view=sql-server-ver16
 - https://learn.microsoft.com/en-us/sql/relational-databases/user-defined-functions/create-user-defined-functions-database-engine?view=sql-server-ver16
 
+### TEMA 3
+- ¿Cuáles son los diferentes tipos de índices en SQL Server y cuándo usar cada uno de ellos? | Estrada Web Group
+- https://learn.microsoft.com/es-es/sql/relational-databases/indexes/indexes?view=sql-server-ver16
+- https://learn.microsoft.com/es-es/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described?view=sql-server-ver16
+- https://learn.microsoft.com/es-es/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions?view=sql-server-ver16
+- https://www.sqlshack.com/es/uso-de-diferentes-tipos-de-indices-sql-server/
+
 ### TEMA 4
 
 - https://learn.microsoft.com/es-es/sql/t-sql/language-elements/begin-transaction-transact-sql?view=sql-server-ver16
