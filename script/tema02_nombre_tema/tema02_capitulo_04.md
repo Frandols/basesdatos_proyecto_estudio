@@ -1,12 +1,12 @@
-**PROCEDIMIENTOS Y FUNCIONES ALMACENADAS**
+**_PROCEDIMIENTOS Y FUNCIONES ALMACENADAS_**
 
-***INTRODUCCIÓN***
+**_INTRODUCCIÓN_**
 
 En este documento se van a presentar: 
 
 Documentación paso a paso de la creación de procedimientos y funciones.
 
-***CREACIÓN DE PROCEDIMIENTOS ALMACENADOS***
+**_CREACIÓN DE PROCEDIMIENTOS ALMACENADOS_**
 
 
 ****1.	Identificar la tabla para la cual queremos crear el/los procedimiento/s****
@@ -68,7 +68,7 @@ Existen dos maneras de ejecutar nuestro procedimiento. Desde una Query, o desde 
 
 
 
-***CREACIÓN DE FUNCIONES ALMACENADAS***
+**_CREACIÓN DE FUNCIONES ALMACENADAS_**
 
 
 ****1.	Abrimos el código generador de la función****
