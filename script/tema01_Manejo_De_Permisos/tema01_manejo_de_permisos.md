@@ -18,7 +18,7 @@ Existen distintos tipos de permisos que pueden ser otorgados a nivel de distinto
 #### Permisos de ejecución y uso de objetos:
 **EXECUTE:** Este permiso permite ejecutar procedimientos almacenados, funciones y otros objetos de programa en la base de datos
 **REFERENCES:** Este permiso permite referenciar objetos como tablas o vistas en claves externas (foreign keys) o en otros tipos de relaciones.
-Permisos de control de estructura:
+#### Permisos de control de estructura:
 **CREATE:** Este comando crea un nuevo objeto en la base de datos, como una tabla, vista, procedimiento almacenado
 **ALTER:** Este comando se usa para modificar un objeto existente en la base de datos.
 **DROP:** Este comando se utiliza para eliminar un objeto existente en la base de datos, como una tabla, vista, índice, o procedimiento almacenado.
