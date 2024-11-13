@@ -204,7 +204,11 @@ En esta sección se colocará un documento el cual se enseña como crear funcion
 > Scripts utilizados para la exposición [scripts-> tema_2](script/tema02_nombre_tema)
 > Archivo utilizado para la presentación
 
-...
+### Desarrollo TEMA 4 "Transacciones y transacciones anidadas"
+
+Aqui se desarrolla el tema "Transacciones y transacciones anidadas".
+
+> Acceder a la siguiente carpeta para la descripción completa del tema [scripts-> tema_4](script/tema04_transacciones-y-transacciones-anidadas)
 
 ## CAPÍTULO V: CONCLUSIONES
 
