@@ -14,9 +14,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date, ,>
--- Description:	<Description, ,>
+-- Author:		<Theo>
+-- Create date: <12/11/2024>
+-- Description:	<Esta función recibe como parámetro un numero de serie de un equipo y te devuelve un estado del equipo>
 -- =============================================
 CREATE FUNCTION devolver_estado_equipo
 (
@@ -73,6 +73,9 @@ BEGIN
 END
 GO
 
+-- codigo que llama a la funcion
+-- SELECT dbo.devolver_estado_equipo2('SN1001') as 'Estado'
+
 --=============================================================================================================================================================
 -- ================================================
 -- Template generated from Template Explorer using:
@@ -90,9 +93,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
+-- Author:		<Theo>
+-- Create date: <12/11/2024>
+-- Description:	<Esta función recibe como parámetro un DNI y te devuelve el nombre y el estado del cliente>
 -- =============================================
 CREATE FUNCTION obtener_nombre_y_estado_cliente
 (
@@ -111,6 +114,44 @@ RETURN
 		c.dni = @dni_cliente
 );
 GO
---==================================================================================================================================================================
 
+-- codigo de ejemplo
+-- SELECT * FROM dbo.obtener_nombre_y_estado_cliente('44293877')
+--==================================================================================================================================================================
+-- ================================================
+-- Template generated from Template Explorer using:
+-- Create Scalar Function (New Menu).SQL
+--
+-- Use the Specify Values for Template Parameters 
+-- command (Ctrl-Shift-M) to fill in the parameter 
+-- values below.
+--
+-- This block of comments will not be included in
+-- the definition of the function.
+-- ================================================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Theo>
+-- Create date: <12/11/2024>
+-- Description:	<Esta función devuelve la cantidad de equipos que estan entregados>
+-- =============================================
+CREATE FUNCTION dbo.contar_equipos_entregados()
+RETURNS INT
+AS
+BEGIN
+    DECLARE @cantidadEntregados INT;
+
+    -- Contar el número de equipos entregados
+    SELECT @cantidadEntregados = COUNT(*)
+    FROM Entregas;
+
+    RETURN @cantidadEntregados;
+END
+GO
+
+-- Codigo que llama a la funcion
+-- SELECT dbo.contar_equipos_entregados() AS 'Equipos entregados'
 
