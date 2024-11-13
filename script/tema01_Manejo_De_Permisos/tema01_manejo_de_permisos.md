@@ -29,10 +29,35 @@ Existen distintos tipos de permisos que pueden ser otorgados a nivel de distinto
 
 #### Permisos a nivel de usuario
 **Usuario con permiso de administrador (db_owner):**
+- Paso 1:
+CREATE LOGIN usuario_admin WITH PASSWORD = '1234',
+CHECK_POLICY = OFF 
+“Creamos un Login para el usuario lectura”
+- Paso 2:
+CREATE USER usuario_admin FOR LOGIN usuario_admin
+“Creamos un usuario para el Login creado anteriormente”
+- Paso 3:
+ALTER ROLE db_owner  ADD MEMBER usuario_admin
+“Asignamos el role db_owner a nuestro usuario”
 
+
+**Al ejecutar**
 La operación se completará sin problemas, ya que el rol db_owner tiene permisos completos sobre la base de datos. Esto significa que puede realizar casi cualquier acción, incluyendo INSERT, DELETE, etc.
-**Usuario con permiso de lectura:** 
 
+
+**Usuario con permiso de lectura(db_datareader):** 
+- Paso 1:
+CREATE LOGIN usuario_lectura WITH PASSWORD = '1234',
+CHECK_POLICY = OFF
+“Creamos un Login para un usuario”
+- Paso 2: 
+CREATE USER usuario_lectura FOR LOGIN usuario_lectura 
+“Creamos un usuario asociado al login”
+- Paso 3:
+ALTER ROLE db_datareader ADD MEMBER usuario_lectura
+“Asignamos el rol db_ datareader a usuario_lectura”
+
+**Al ejecutar**
 Si un usuario solo tiene permisos de SELECT en una base de datos e intenta realizar un INSERT, la operación fallará y recibirá un error de permisos. Esto se debe a que el permiso de SELECT únicamente le permite leer datos, pero no le otorga derechos para modificar, insertar o eliminar datos en la base de datos
 #### Permisos a nivel de roles
 **Si el usuario tiene rol de lectura y realiza un SELECT:** La consulta SELECT se ejecutará exitosamente. El usuario podrá ver los datos de las tablas y vistas en la base de datos, de acuerdo con los permisos específicos asociados al rol de lectura.
