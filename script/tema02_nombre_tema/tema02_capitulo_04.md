@@ -83,8 +83,6 @@ Vamos a crear una conexión->Acceder al explorador de objetos->Clickeamos en la 
 Procedemos a una vez estando con el código abierto, acceder a Query->Specify Values for Template Parameters. Vamos a modificar el autor, la fecha, la descripción y el nombre de nuestra función
 
 ![image](https://github.com/user-attachments/assets/f32567e6-ee96-4180-b4ee-d3ccc05b0253)
-![image](https://github.com/user-attachments/assets/36554388-2cab-4a37-9dbb-67df98ef17aa)
-
 
 ****3.	Modificar la función****
 
