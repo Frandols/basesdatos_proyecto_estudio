@@ -64,6 +64,8 @@ Existen dos maneras de ejecutar nuestro procedimiento. Desde una Query, o desde 
 
 ![image](https://github.com/user-attachments/assets/32f7ffb8-cdd0-47d1-bc85-41fab608aa71)
 
+![image](https://github.com/user-attachments/assets/f1950ad0-c947-4dca-bf0a-d3722f315af3)
+
 
 
 ***CREACIÓN DE FUNCIONES ALMACENADAS***
