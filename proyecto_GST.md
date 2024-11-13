@@ -47,10 +47,10 @@ Dado a que el negocio actualmente gestiona su flujo de trabajo a traves del uso 
 
 ## CAPITULO II: MARCO CONCEPTUAL O REFERENCIAL
 
-**TEMA 1 " ---- "**
+###**TEMA 1 " ---- "**
 Ut sed imperdiet risus. Maecenas vestibulum arcu vitae orci pretium pharetra. Suspendisse potenti. Fusce massa libero, fermentum eget elit in, tincidunt fermentum nunc. Cras imperdiet nisl elit, elementum gravida enim accumsan vel. Sed in sapien quis ante consectetur commodo id non nulla. Aenean lacinia, dolor convallis semper mattis, ante orci elementum nunc, eget feugiat risus neque in urna. Ut ut quam nec risus mollis convallis ornare ac odio. Phasellus efficitur posuere nibh, eget tempor augue pellentesque ac. Ut enim sem, imperdiet non est ut, blandit posuere dui. Curabitur at purus orci. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
-**TEMA 2 " Procedimientos y Funciones Almacenadas "**
+###**TEMA 2 " Procedimientos y Funciones Almacenadas "**
 
 - En esta sección, vamos a abordar distintos puntos respecto a los procedimientos y funciones almacenadas dentro de SQL server.
 - Se hará una no muy extensa presentación sobre los conceptos referidos a cada uno, sus tipos y las ventajas que posee el utilizar estas funciones o procedimientos, a comparación de las operaciones directas.
@@ -112,7 +112,9 @@ Trafico de red reducido - Se refiere a que usar los procedimientos almacenados, 
 Simple mantenimiento - Si necesitas modificar algo en la lógica de una operación, lo cambias solo una vez dentro de la función almacenada. Seguís llamando al mismo procedimiento sin tener que preocuparte por la lógica interna. Esto hace que el mantenimiento sea más sencillo, ya que solo se cambia la base de datos y no el código de la aplicación.
 Rendimiento mejorado - De forma predeterminada, un procedimiento se compila la primera vez que se ejecuta y crea un plan de ejecución que vuelve a usarse en posteriores ejecuciones. Como el procesador de consultas no tiene que crear un nuevo plan, normalmente necesita menos tiempo para procesar el procedimiento.
 
-**TEMA 4 "Transacciones y transacciones anidadas"**
+###**TEMA 3 "Optimización de Consultas a través de índices"**
+
+###**TEMA 4 "Transacciones y transacciones anidadas"**
 
 ## ¿Qué son las transacciones?
 
