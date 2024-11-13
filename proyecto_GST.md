@@ -51,72 +51,102 @@ Dado a que el negocio actualmente gestiona su flujo de trabajo a traves del uso 
 Ut sed imperdiet risus. Maecenas vestibulum arcu vitae orci pretium pharetra. Suspendisse potenti. Fusce massa libero, fermentum eget elit in, tincidunt fermentum nunc. Cras imperdiet nisl elit, elementum gravida enim accumsan vel. Sed in sapien quis ante consectetur commodo id non nulla. Aenean lacinia, dolor convallis semper mattis, ante orci elementum nunc, eget feugiat risus neque in urna. Ut ut quam nec risus mollis convallis ornare ac odio. Phasellus efficitur posuere nibh, eget tempor augue pellentesque ac. Ut enim sem, imperdiet non est ut, blandit posuere dui. Curabitur at purus orci. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
 **TEMA 2 " Procedimientos y Funciones Almacenadas "**
+
 - En esta sección, vamos a abordar distintos puntos respecto a los procedimientos y funciones almacenadas dentro de SQL server.
 - Se hará una no muy extensa presentación sobre los conceptos referidos a cada uno, sus tipos y las ventajas que posee el utilizar estas funciones o procedimientos, a comparación de las operaciones directas.
-  
-***DEFINICIONES***
-  
-  ****Procedimientos Almacenados****
-  - Un procedimiento almacenado de SQL Server es un grupo de una o varias instrucciones Transact-SQL. Donde una instrucción Transact-SQL (T-SQL) es una orden que       le das a SQL Server para que haga algo en la base de datos (sea agregar datos, obtener información de la base de datos, actualizar datos, eliminar datos.          Además también se puede definir condiciones, usar bucles y hacer transacciones).
-  - Éstos procedimientos almacenados pueden:
-      -	Aceptar parámetros de entrada y devolver varios valores en forma de parámetros de salida al programa que realiza la llamada.
-      -	Contener instrucciones de programación que realicen operaciones en la base de datos. Entre otras, pueden contener llamadas a otros procedimientos.
-      -	Devolver un valor de estado a un programa que realiza una llamada para indicar si la operación se ha realizado correctamente o se han producido errores, y         el motivo de estos.
 
-  ****Funciones Almacenadas****
-  - Una función almacenada en SQL es un conjunto de instrucciones que se agrupan para realizar una tarea específica en la base de datos. Las funciones almacenadas     son similares a los procedimientos almacenados, pero tienen algunas diferencias clave:
-        -	Una función siempre devuelve un valor, a diferencia de los procedimientos almacenados, que pueden no devolver nada.
-        -	Las funciones pueden usarse directamente en consultas SQL (como en SELECT, WHERE, etc.), mientras que los procedimientos almacenados no pueden.
-        -	Una función puede devolver un solo valor de tipo de datos o una tabla (en el caso de las funciones de tipo tabla).
-    
-***TIPOS***
+**_DEFINICIONES_**
 
-****Procedimientos Almacenados****
- 
-	Procedimientos almacenados del usuario 
-		- Son procedimientos definidos por el usuario y se diseñaron para realizar tareas específicas en la base de datos. Son los más comunes y los 	que usualmente se crean para manejar operaciones en la base de datos como insertar, actualizar, eliminar o consultar datos.
+\***\*Procedimientos Almacenados\*\***
 
-	Procedimientos almacenados del sistema
- 		- Son procedimientos definidos por SQL Server y están diseñados para realizar tareas administrativas y de mantenimiento en la base de datos. Estos procedimientos pueden ser invocados directamente sin necesidad de ser definidos por el usuario. Por ejemplo: 
-   		sp_help: Muestra información sobre objetos de base de datos. 
-   		sp_adduser: Agrega un nuevo 	usuario a la base de datos. 
-   		sp_configure: Configura opciones del servidor.
+- Un procedimiento almacenado de SQL Server es un grupo de una o varias instrucciones Transact-SQL. Donde una instrucción Transact-SQL (T-SQL) es una orden que le das a SQL Server para que haga algo en la base de datos (sea agregar datos, obtener información de la base de datos, actualizar datos, eliminar datos. Además también se puede definir condiciones, usar bucles y hacer transacciones).
+- Éstos procedimientos almacenados pueden:
+  - Aceptar parámetros de entrada y devolver varios valores en forma de parámetros de salida al programa que realiza la llamada.
+  - Contener instrucciones de programación que realicen operaciones en la base de datos. Entre otras, pueden contener llamadas a otros procedimientos.
+  - Devolver un valor de estado a un programa que realiza una llamada para indicar si la operación se ha realizado correctamente o se han producido errores, y el motivo de estos.
 
-	Procedimientos Temporales 
-		- Son una variación de procedimientos definidos por el usuario, pero se almacenan en una base de datos especial llamada tempdb. Son útiles cuando se necesita crear procedimientos que solo existan durante una sesión o para realizar tareas temporales y específicas. 
-		- Por ejemplo: 
-			Locales: Se identifican con un solo signo de número (#) al principio del nombre del procedimiento. Son visibles solo para la conexión del usuario que los creó. Se eliminan automáticamente cuando se cierra la conexión. Ejemplo: #MiProcedimientoTemporal 
-			Globales: Se identifican con doble signo de número (##) al principio del nombre del procedimiento. Son visibles para cualquier usuario que tenga acceso a la base de datos y se eliminan automáticamente después de que se cierre la última conexión que esté utilizando el procedimiento. Ejemplo: ##MiProcedimientoGlobal
+\***\*Funciones Almacenadas\*\***
 
-	Procedimientos Extendidos Definidos por el Usuario 
-		- Los procedimientos extendidos definidos por el usuario son bibliotecas externas (DLL) que puedes cargar y ejecutar desde SQL Server. Estos procedimientos permiten realizar operaciones más complejas que no se pueden hacer directamente con Transact-SQL.
+- Una función almacenada en SQL es un conjunto de instrucciones que se agrupan para realizar una tarea específica en la base de datos. Las funciones almacenadas son similares a los procedimientos almacenados, pero tienen algunas diferencias clave: - Una función siempre devuelve un valor, a diferencia de los procedimientos almacenados, que pueden no devolver nada. - Las funciones pueden usarse directamente en consultas SQL (como en SELECT, WHERE, etc.), mientras que los procedimientos almacenados no pueden. - Una función puede devolver un solo valor de tipo de datos o una tabla (en el caso de las funciones de tipo tabla).
 
-****Funciones Almacenadas****
+**_TIPOS_**
 
-	Funciones escalares 
-		- Descripción: Las funciones escalares son las más comunes. Devuelven un único valor de un tipo de datos específico (como int, varchar, date, etc.). Uso: Se utilizan en consultas para devolver un valor calculado. Por ejemplo, una función que calcule el salario total de un empleado sumando varias columnas.
+\***\*Procedimientos Almacenados\*\***
 
-	Funciones de tabla 
-		- Descripción: Las funciones de tabla devuelven un conjunto de resultados, es decir, una tabla completa. A diferencia de las funciones escalares, no devuelven un único valor, sino que pueden devolver filas y columnas como una tabla virtual. Uso: Se utilizan cuando necesitas devolver varias filas o un conjunto de datos basado en un conjunto de condiciones.
+    Procedimientos almacenados del usuario
+    	- Son procedimientos definidos por el usuario y se diseñaron para realizar tareas específicas en la base de datos. Son los más comunes y los 	que usualmente se crean para manejar operaciones en la base de datos como insertar, actualizar, eliminar o consultar datos.
 
-	Funciones agregadas 
-		- Descripción: Son funciones que realizan una operación de agregación, como contar, promediar, sumar, encontrar el máximo o el mínimo. Uso: Se utilizan para realizar cálculos agregados dentro de una consulta.
+    Procedimientos almacenados del sistema
 
-***VENTAJAS***
+- Son procedimientos definidos por SQL Server y están diseñados para realizar tareas administrativas y de mantenimiento en la base de datos. Estos procedimientos pueden ser invocados directamente sin necesidad de ser definidos por el usuario. Por ejemplo:
+  sp_help: Muestra información sobre objetos de base de datos.
+  sp_adduser: Agrega un nuevo usuario a la base de datos.
+  sp_configure: Configura opciones del servidor.
+
+  Procedimientos Temporales - Son una variación de procedimientos definidos por el usuario, pero se almacenan en una base de datos especial llamada tempdb. Son útiles cuando se necesita crear procedimientos que solo existan durante una sesión o para realizar tareas temporales y específicas. - Por ejemplo:
+  Locales: Se identifican con un solo signo de número (#) al principio del nombre del procedimiento. Son visibles solo para la conexión del usuario que los creó. Se eliminan automáticamente cuando se cierra la conexión. Ejemplo: #MiProcedimientoTemporal
+  Globales: Se identifican con doble signo de número (##) al principio del nombre del procedimiento. Son visibles para cualquier usuario que tenga acceso a la base de datos y se eliminan automáticamente después de que se cierre la última conexión que esté utilizando el procedimiento. Ejemplo: ##MiProcedimientoGlobal
+
+  Procedimientos Extendidos Definidos por el Usuario - Los procedimientos extendidos definidos por el usuario son bibliotecas externas (DLL) que puedes cargar y ejecutar desde SQL Server. Estos procedimientos permiten realizar operaciones más complejas que no se pueden hacer directamente con Transact-SQL.
+
+\***\*Funciones Almacenadas\*\***
+
+    Funciones escalares
+    	- Descripción: Las funciones escalares son las más comunes. Devuelven un único valor de un tipo de datos específico (como int, varchar, date, etc.). Uso: Se utilizan en consultas para devolver un valor calculado. Por ejemplo, una función que calcule el salario total de un empleado sumando varias columnas.
+
+    Funciones de tabla
+    	- Descripción: Las funciones de tabla devuelven un conjunto de resultados, es decir, una tabla completa. A diferencia de las funciones escalares, no devuelven un único valor, sino que pueden devolver filas y columnas como una tabla virtual. Uso: Se utilizan cuando necesitas devolver varias filas o un conjunto de datos basado en un conjunto de condiciones.
+
+    Funciones agregadas
+    	- Descripción: Son funciones que realizan una operación de agregación, como contar, promediar, sumar, encontrar el máximo o el mínimo. Uso: Se utilizan para realizar cálculos agregados dentro de una consulta.
+
+**_VENTAJAS_**
 
 Procedimientos y Funciones Almacenadas
 
-	Mayor seguridad 
-		- Se limita el acceso a las tablas y otros objetos de base de datos a través de éstos procedimientos y funciones, en lugar de dar acceso directo a cada tabla o comando. 
-  	Reutilización del código 
-		- Se puede encapsular operaciones comunes en la base de datos dentro de un proceso similar para evitar escribir el código repetidas veces en diferentes partes de una aplicación. 
-	Trafico de red reducido 
-		- Se refiere a que usar los procedimientos almacenados, el cliente, solo envía una llamada única al procedimiento almacenado en el servidor, en lugar de enviar múltiples comandos SQL individuales. 
-	Simple mantenimiento 
-		- Si necesitas modificar algo en la lógica de una operación, lo cambias solo una vez dentro de la función almacenada. Seguís llamando al mismo procedimiento sin tener que preocuparte por la lógica interna. Esto hace que el mantenimiento sea más sencillo, ya que solo se cambia la base de datos y no el código de la aplicación. 
-	Rendimiento mejorado 
-		- De forma predeterminada, un procedimiento se compila la primera vez que se ejecuta y crea un plan de ejecución que vuelve a usarse en posteriores ejecuciones. Como el procesador de consultas no tiene que crear un nuevo plan, normalmente necesita menos tiempo para procesar el procedimiento.
+    Mayor seguridad
+    	- Se limita el acceso a las tablas y otros objetos de base de datos a través de éstos procedimientos y funciones, en lugar de dar acceso directo a cada tabla o comando.
 
+Reutilización del código - Se puede encapsular operaciones comunes en la base de datos dentro de un proceso similar para evitar escribir el código repetidas veces en diferentes partes de una aplicación.
+Trafico de red reducido - Se refiere a que usar los procedimientos almacenados, el cliente, solo envía una llamada única al procedimiento almacenado en el servidor, en lugar de enviar múltiples comandos SQL individuales.
+Simple mantenimiento - Si necesitas modificar algo en la lógica de una operación, lo cambias solo una vez dentro de la función almacenada. Seguís llamando al mismo procedimiento sin tener que preocuparte por la lógica interna. Esto hace que el mantenimiento sea más sencillo, ya que solo se cambia la base de datos y no el código de la aplicación.
+Rendimiento mejorado - De forma predeterminada, un procedimiento se compila la primera vez que se ejecuta y crea un plan de ejecución que vuelve a usarse en posteriores ejecuciones. Como el procesador de consultas no tiene que crear un nuevo plan, normalmente necesita menos tiempo para procesar el procedimiento.
+
+**TEMA 4 "Transacciones y transacciones anidadas"**
+
+## ¿Qué son las transacciones?
+
+Las transacciones en bases de datos son operaciones que garantizan la **integridad y consistencia de los datos**. Consisten en una o más instrucciones que se ejecutan de forma secuencial y se consideran una unidad **atómica**, es decir, **la transacción completa o no se realiza en absoluto**.
+
+SQL Server y otros sistemas de gestión de bases de datos relacionales implementan el modelo **ACID** (Atomicidad, Consistencia, Aislamiento y Durabilidad) para asegurar el manejo confiable de las transacciones. Este modelo asegura que los datos se mantengan íntegros incluso en caso de errores o fallos del sistema.
+
+## ¿Qué nos ofrece una transacción?
+
+Una transacción garantiza que todas las operaciones **se completen o se reviertan en su totalidad**. Esto es particularmente útil en operaciones complejas que involucran múltiples instrucciones, ya que, si una instrucción falla, la transacción completa puede revertirse usando la instrucción **ROLLBACK**. Esto asegura que los datos no queden en un estado intermedio o inconsistente.
+
+## ¿Cómo se escriben las transacciones en T-SQL?
+
+En **Transact-SQL (T-SQL)**, se inicia una transacción con `BEGIN TRANSACTION`, se confirma con `COMMIT` y, si ocurre un error, se revierte con `ROLLBACK`. Este enfoque es ampliamente utilizado para **operaciones de inserción, actualización o eliminación de datos** en varias tablas que dependen unas de otras.
+
+## ¿Qué son las transacciones anidadas?
+
+Las **transacciones anidadas** son transacciones dentro de otra transacción. En T-SQL, las transacciones anidadas permiten realizar **múltiples operaciones agrupadas en varios niveles de transacciones**. Cada `BEGIN TRANSACTION` anidado incrementa un contador de nivel de transacción, pero solo la primera transacción iniciada puede realizar un `COMMIT` definitivo.
+
+> **Nota:** Si una transacción anidada interna realiza un `ROLLBACK`, la transacción externa también debe revertirse, garantizando así la consistencia de los datos.
+
+### Ventajas
+
+- Las transacciones aseguran que las operaciones complejas se realicen completamente o no se realicen en absoluto.
+- Las transacciones anidadas permiten manejar sub-operaciones dentro de una transacción principal, ofreciendo mayor control y manejo de errores.
+
+### Desventajas
+
+- Las transacciones anidadas pueden dificultar la **depuración** y el manejo de errores en sistemas complejos.
+- Un `ROLLBACK` en una transacción anidada provoca la reversión de toda la transacción, lo cual puede no ser siempre el comportamiento deseado.
+
+## Conclusión
+
+Las **transacciones** y las **transacciones anidadas** son herramientas cruciales en el manejo de la consistencia de los datos. El uso adecuado de estas técnicas depende del contexto y de la naturaleza de las operaciones de la base de datos.
 
 ## CAPÍTULO III: METODOLOGÍA SEGUIDA
 
