@@ -11,7 +11,10 @@ Para este ejemplo, voy a trabajar con una tabla denominada Clientes
 
 2.	Abrimos el código para crear un procedimiento almacenado
 Dentro de nuestro SQL SERVER, vamos a abrir una nueva conexión y en el Explorador de objetos accederemos a Databases-> La base de datos sobre la cual queremos trabajar -> Programmability -> click derecho en Stored Procedures -> accedemos a la opción Stored Procedure…
+
 ![image](https://github.com/user-attachments/assets/19bbf912-fa58-4be0-8c78-4ce120d284d2)
+![image](https://github.com/user-attachments/assets/5e1d66f9-a970-4950-a55a-472e2b482791)
+
 
 
 4.	Edición de las partes principales del código
