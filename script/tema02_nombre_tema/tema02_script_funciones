@@ -18,7 +18,7 @@ GO
 -- Create date: <Create Date, ,>
 -- Description:	<Description, ,>
 -- =============================================
-CREATE FUNCTION devolver_estado_equipo2
+CREATE FUNCTION devolver_estado_equipo
 (
 	-- Add the parameters for the function here
 	@numeroSerie varchar(256)
