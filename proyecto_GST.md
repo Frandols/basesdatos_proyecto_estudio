@@ -207,13 +207,11 @@ Las **transacciones** y las **transacciones anidadas** son herramientas cruciale
 
 ## CAPÍTULO III: METODOLOGÍA SEGUIDA
 
-Donec lobortis tincidunt erat, non egestas mi volutpat in. Cras ante purus, luctus sed fringilla non, ullamcorper at eros.
-
 **a) Cómo se realizó el Trabajo Práctico**
-Vestibulum rutrum feugiat molestie. Nunc id varius augue. Ut augue mauris, venenatis et lacus ut, mattis blandit urna. Fusce lobortis, quam non vehicula scelerisque, nisi enim ultrices diam, ac tristique libero ex nec orci.
+Para desarrollar este trabajo práctico, cada integrante del equipo trabajó de manera individual en su parte correspondiente. Una vez completadas las secciones individuales, se coordinó una llamada virtual en la cual se compartieron y unificaron todos los aportes. Posteriormente, la versión final se subió al repositorio del equipo para su almacenamiento y futuras revisiones.
 
 **b) Herramientas (Instrumentos y procedimientos)**
-Donec lobortis tincidunt erat, non egestas mi volutpat in. Cras ante purus, luctus sed fringilla non, ullamcorper at eros. Integer interdum id orci id rutrum. Curabitur facilisis lorem sed metus interdum accumsan.
+En cuanto a las herramientas utilizadas, recurrimos principalmente a la búsqueda de información en fuentes digitales a través de Google, permitiendo complementar y verificar la información teórica. Para la gestión de la base de datos y la elaboración de consultas, utilizamos SQL Server Management Studio, lo que facilitó la creación, prueba, y depuración de procedimientos almacenados y funciones SQL necesarios para el proyecto.
 
 ## CAPÍTULO IV: DESARROLLO DEL TEMA / PRESENTACIÓN DE RESULTADOS
 
