@@ -86,16 +86,3 @@ Quedando:
 Para llamar a la función que creamos, en este caso se llamaría con la sentencia SELECT, el nombre de la función y entre paréntesis el parámetro, quedando de ésta forma
 
 ![image](https://github.com/user-attachments/assets/3648d31b-ab68-4a24-989b-37fa02d21b71)
-
-
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/f5df8bf2-bb68-4818-a5b5-948055027ed9)
-
-
-
-
-
