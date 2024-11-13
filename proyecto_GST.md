@@ -48,6 +48,7 @@ Dado a que el negocio actualmente gestiona su flujo de trabajo a traves del uso 
 ## CAPITULO II: MARCO CONCEPTUAL O REFERENCIAL
 
 ### **TEMA 1 " ---- "**
+
 Ut sed imperdiet risus. Maecenas vestibulum arcu vitae orci pretium pharetra. Suspendisse potenti. Fusce massa libero, fermentum eget elit in, tincidunt fermentum nunc. Cras imperdiet nisl elit, elementum gravida enim accumsan vel. Sed in sapien quis ante consectetur commodo id non nulla. Aenean lacinia, dolor convallis semper mattis, ante orci elementum nunc, eget feugiat risus neque in urna. Ut ut quam nec risus mollis convallis ornare ac odio. Phasellus efficitur posuere nibh, eget tempor augue pellentesque ac. Ut enim sem, imperdiet non est ut, blandit posuere dui. Curabitur at purus orci. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
 ### **TEMA 2 " Procedimientos y Funciones Almacenadas "**
@@ -163,22 +164,6 @@ Donec lobortis tincidunt erat, non egestas mi volutpat in. Cras ante purus, luct
 ## CAPÍTULO IV: DESARROLLO DEL TEMA / PRESENTACIÓN DE RESULTADOS
 
 Maecenas molestie lacus tincidunt, placerat dolor et, ullamcorper erat. Mauris tortor nisl, ultricies ac scelerisque nec, feugiat in nibh. Pellentesque interdum aliquam magna sit amet rutrum.
-
-### Diagrama conceptual (opcional)
-
-Ejemplo usando Live Editor https://mermaid.js.org/ (ejemplo opcional)
-
-```mermaid
-erDiagram
-CUSTOMER  }|..|{  DELIVERY-ADDRESS  : has
-CUSTOMER  ||--o{  ORDER  : places
-CUSTOMER  ||--o{  INVOICE  : "liable for"
-DELIVERY-ADDRESS  ||--o{  ORDER  : receives
-INVOICE  ||--|{  ORDER  : covers
-ORDER  ||--|{  ORDER-ITEM  : includes
-PRODUCT-CATEGORY  ||--|{  PRODUCT  : contains
-PRODUCT  ||--o{  ORDER-ITEM  : "ordered in"
-```
 
 ### Diagrama relacional
 
