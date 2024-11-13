@@ -239,7 +239,6 @@ En el siguiente enlace está contenido el desarrollo del tema 1
 
 En esta sección se colocará un documento el cual se enseña como crear funciones y procedimientos almacenados.
 
-
 > Acceder a la siguiente carpeta para la descripción completa del tema - Capitulo 4: [scripts-> capitulo 4](script/tema02_nombre_tema/tema02_capitulo_04.md)
 
 
@@ -253,7 +252,9 @@ Aqui se desarrolla el tema "Transacciones y transacciones anidadas".
 
 ## CAPÍTULO V: CONCLUSIONES
 
-Nunc sollicitudin purus quis ante sodales luctus. Proin a scelerisque libero, vitae pharetra lacus. Nunc finibus, tellus et dictum semper, nisi sem accumsan ligula, et euismod quam ex a tellus.
+A lo largo de este proyecto, aprendimos muchas cosas interesantes. Tuvimos que investigar bastante por internet para poder entender cómo llevar adelante las tareas, y eso nos ayudó mucho a poner en práctica lo aprendido. Usamos herramientas como SQL Server Management para armar la parte técnica, y logramos crear un sistema funcional que cumple con lo que necesitábamos.
+
+El hecho de trabajar por separado pero luego reunirnos para juntar todo nos permitió tener una base bastante sólida. Aunque hubo bastante trabajo, al final vimos cómo todo fue tomando forma y resultó en un proyecto que, aunque sencillo, cumple con su propósito. Sin dudas, esta experiencia fue bastante útil y nos dejó un buen aprendizaje para el futuro.
 
 ## BIBLIOGRAFÍA DE CONSULTA
 
