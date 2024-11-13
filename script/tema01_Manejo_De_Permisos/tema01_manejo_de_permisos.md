@@ -60,8 +60,8 @@ ALTER ROLE db_datareader ADD MEMBER usuario_lectura
 **Al ejecutar**
 Si un usuario solo tiene permisos de SELECT en una base de datos e intenta realizar un INSERT, la operación fallará y recibirá un error de permisos. Esto se debe a que el permiso de SELECT únicamente le permite leer datos, pero no le otorga derechos para modificar, insertar o eliminar datos en la base de datos
 #### Permisos a nivel de roles
-**Si el usuario tiene rol de lectura y realiza un SELECT:** La consulta SELECT se ejecutará exitosamente. El usuario podrá ver los datos de las tablas y vistas en la base de datos, de acuerdo con los permisos específicos asociados al rol de lectura.
-**Si el usuario no tiene rol de lectura y realiza un SELECT:** La operación fallará y el usuario recibirá un mensaje de error de permisos, generalmente indicando que no tiene los privilegios necesarios para realizar esa operación ‘The SELECT permission was denied on the object Clientes’
+- **Si el usuario tiene rol de lectura y realiza un SELECT:** La consulta SELECT se ejecutará exitosamente. El usuario podrá ver los datos de las tablas y vistas en la base de datos, de acuerdo con los permisos específicos asociados al rol de lectura.  
+- **Si el usuario no tiene rol de lectura y realiza un SELECT:** La operación fallará y el usuario recibirá un mensaje de error de permisos, generalmente indicando que no tiene los privilegios necesarios para realizar esa operación ‘The SELECT permission was denied on the object Clientes’
 
 #### Conclusión
 
