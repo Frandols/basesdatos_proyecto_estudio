@@ -257,6 +257,13 @@ A lo largo de este proyecto, aprendimos muchas cosas interesantes. Tuvimos que i
 El hecho de trabajar por separado pero luego reunirnos para juntar todo nos permitió tener una base bastante sólida. Aunque hubo bastante trabajo, al final vimos cómo todo fue tomando forma y resultó en un proyecto que, aunque sencillo, cumple con su propósito. Sin dudas, esta experiencia fue bastante útil y nos dejó un buen aprendizaje para el futuro.
 
 ## BIBLIOGRAFÍA DE CONSULTA
+### TEMA 1
+
+- https://drive.google.com/drive/folders/1Innl1SMlshG8O4BTC9FLgRJw7ELmt8qV
+- https://learn.microsoft.com/es-es/sql/t-sql/statements/create-role-transact-sql?view=sql-server-ver16
+- https://learn.microsoft.com/es-es/sql/relational-databases/security/permissions-database-engine?view=sql-server-ver16
+- https://learn.microsoft.com/es-es/sql/t-sql/lesson-2-configuring-permissions-on-database-objects?view=sql-server-ver16 
+
 
 ### TEMA 2
 
