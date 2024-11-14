@@ -1,6 +1,6 @@
--- Eliminar Ìndices existentes si no son necesarios
-DROP INDEX IX_Usuarios_DNI ON dbo.Usuarios;
-DROP INDEX IX_Usuarios_Correo ON dbo.Usuarios;
+-- Eliminar √≠ndices existentes si no son necesarios
+--DROP INDEX IX_Usuarios_DNI ON dbo.Usuarios;
+--DROP INDEX IX_Usuarios_Correo ON dbo.Usuarios;
 
 -- carga masiva de datos
 DECLARE @i INT = 0;
@@ -23,7 +23,7 @@ GO
 
 
 
--- 2. Consulta sin Ìndice en fechaDeIngreso y registro del plan de ejecuciÛn
+-- 2. Consulta sin √≠ndice en fechaDeIngreso y registro del plan de ejecuci√≥n
 SET STATISTICS TIME ON;
 SET STATISTICS IO ON;
 SELECT * FROM [dbo].[Usuarios]
@@ -32,11 +32,11 @@ SET STATISTICS TIME OFF;
 SET STATISTICS IO OFF;
 GO
 
--- 3. Crear Ìndice Clustered en la columna fechaDeIngreso
+-- 3. Crear √≠ndice Clustered en la columna fechaDeIngreso
 CREATE CLUSTERED INDEX IX_Usuarios_fechaDeIngreso ON [dbo].[Usuarios](fechaDeIngreso);
 GO
 
--- Repetir la consulta y medir rendimiento con Ìndice Clustered en fechaDeIngreso
+-- Repetir la consulta y medir rendimiento con √≠ndice Clustered en fechaDeIngreso
 SET STATISTICS TIME ON;
 SET STATISTICS IO ON;
 SELECT * FROM [dbo].[Usuarios]
@@ -45,15 +45,15 @@ SET STATISTICS TIME OFF;
 SET STATISTICS IO OFF;
 GO
 
---  Borrar el Ìndice Clustered en fechaDeIngreso
+--  Borrar el √≠ndice Clustered en fechaDeIngreso
 DROP INDEX IX_Usuarios_fechaDeIngreso ON [dbo].[Usuarios];
 GO
 
---  Crear otro Ìndice Clustered en fechaDeIngreso con columnas adicionales
+--  Crear otro √≠ndice Clustered en fechaDeIngreso con columnas adicionales
 CREATE CLUSTERED INDEX IX_Usuarios_fechaDeIngreso_Incluye ON [dbo].[Usuarios](fechaDeIngreso) INCLUDE (nombre, usuario, correo);
 GO
 
--- Repetir la consulta y medir rendimiento con Ìndice Clustered que incluye columnas
+-- Repetir la consulta y medir rendimiento con √≠ndice Clustered que incluye columnas
 SET STATISTICS TIME ON;
 SET STATISTICS IO ON;
 SELECT nombre, usuario, correo FROM [dbo].[Usuarios]
@@ -62,21 +62,21 @@ SET STATISTICS TIME OFF;
 SET STATISTICS IO OFF;
 GO
 
---Crea Ìndices adicionales
+--Crea √≠ndices adicionales
 
--- Õndice no agrupado en DNI
+-- √çndice no agrupado en DNI
 CREATE NONCLUSTERED INDEX IX_Usuarios_DNI ON [dbo].[Usuarios](DNI);
 GO
 
--- Õndice ˙nico no agrupado en correo
+-- √çndice √∫nico no agrupado en correo
 CREATE UNIQUE NONCLUSTERED INDEX IX_Usuarios_Correo ON [dbo].[Usuarios](correo);
 GO
 
--- Õndice filtrado en usuarios que ingresaron en 2021
+-- √çndice filtrado en usuarios que ingresaron en 2021
 CREATE NONCLUSTERED INDEX IX_Usuarios_Filtro2021 ON [dbo].[Usuarios](fechaDeIngreso) WHERE fechaDeIngreso BETWEEN '2021-01-01' AND '2021-12-31';
 GO
 
--- Consulta final con los Ìndices creados y registro de estadÌsticas
+-- Consulta final con los √≠ndices creados y registro de estad√≠sticas
 SET STATISTICS TIME ON;
 SET STATISTICS IO ON;
 SELECT nombre, usuario, correo FROM [dbo].[Usuarios]
