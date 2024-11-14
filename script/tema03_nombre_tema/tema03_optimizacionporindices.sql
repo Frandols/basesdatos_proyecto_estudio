@@ -1,6 +1,6 @@
 -- Eliminar índices existentes si no son necesarios
---DROP INDEX IX_Usuarios_DNI ON dbo.Usuarios;
---DROP INDEX IX_Usuarios_Correo ON dbo.Usuarios;
+--DROP INDEX IF EXISTS IX_Usuarios_DNI ON dbo.Usuarios;
+--DROP INDEX IF EXISTS IX_Usuarios_Correo ON dbo.Usuarios;
 
 -- carga masiva de datos
 DECLARE @i INT = 0;
