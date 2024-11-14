@@ -73,9 +73,6 @@ BEGIN
 END
 GO
 
--- codigo que llama a la funcion
--- SELECT dbo.devolver_estado_equipo2('SN1001') as 'Estado'
-
 --=============================================================================================================================================================
 -- ================================================
 -- Template generated from Template Explorer using:
@@ -115,8 +112,6 @@ RETURN
 );
 GO
 
--- codigo de ejemplo
--- SELECT * FROM dbo.obtener_nombre_y_estado_cliente('44293877')
 --==================================================================================================================================================================
 -- ================================================
 -- Template generated from Template Explorer using:
@@ -151,7 +146,4 @@ BEGIN
     RETURN @cantidadEntregados;
 END
 GO
-
--- Codigo que llama a la funcion
--- SELECT dbo.contar_equipos_entregados() AS 'Equipos entregados'
 
