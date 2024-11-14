@@ -1,72 +1,86 @@
--- Paso 1: Carga masiva de datos en la tabla Equipos
-DECLARE @i INT = 1;
-BEGIN TRANSACTION;
-WHILE @i <= 1000000
+-- Eliminar índices existentes si no son necesarios
+DROP INDEX IX_Usuarios_DNI ON dbo.Usuarios;
+DROP INDEX IX_Usuarios_Correo ON dbo.Usuarios;
+
+-- carga masiva de datos
+DECLARE @i INT = 0;
+WHILE @i < 1000000
 BEGIN
-    INSERT INTO [dbo].[Equipos] (
-        [numeroDeSerie], 
-        [observaciones], 
-        [razonDeIngreso], 
-        [enciende], 
-        [fechaDeIngreso], 
-        [idTipoDeEquipo], 
-        [idMarca], 
-        [idModelo], 
-        [idCliente], 
-        [baja], 
-        [estado]
-    )
+    INSERT INTO [dbo].[Usuarios] (nombre, usuario, contrasena, apellido, DNI, telefono, correo, fechaDeIngreso)
     VALUES (
-        'SN-' + CAST(@i AS VARCHAR), 
-        'Observación de prueba', 
-        'Reparación', 
-        'Sí', 
-        DATEADD(DAY, -@i % 365, GETDATE()), -- Genera una fecha aleatoria dentro del último año
-        1, 
-        1, 
-        1, 
-        1, 
-        'No', 
-        1
+        CONCAT('Nombre', @i),
+        CONCAT('Usuario', @i),
+        'contrasena123',
+        CONCAT('Apellido', @i),
+        RIGHT(CONCAT('00000000', @i), 8),
+        CONCAT('1123456789', @i % 10),
+        CONCAT('correo', @i, '@example.com'),
+        DATEADD(DAY, @i % 365, '2020-01-01')  -- Fecha de ingreso variada
     );
     SET @i = @i + 1;
 END;
-COMMIT TRANSACTION;
+GO
 
--- Paso 2: Búsqueda de registros en un rango de fechas y registro del plan de ejecución
+
+
+-- 2. Consulta sin índice en fechaDeIngreso y registro del plan de ejecución
 SET STATISTICS TIME ON;
 SET STATISTICS IO ON;
-SELECT * FROM [dbo].[Equipos]
-WHERE [fechaDeIngreso] BETWEEN '2024-01-01' AND '2024-12-31';
+SELECT * FROM [dbo].[Usuarios]
+WHERE fechaDeIngreso BETWEEN '2021-01-01' AND '2021-12-31';
 SET STATISTICS TIME OFF;
 SET STATISTICS IO OFF;
+GO
 
--- Paso 3: Crear un índice agrupado sobre la columna fechaDeIngreso
-CREATE CLUSTERED INDEX IX_FechaDeIngreso ON [dbo].[Equipos] ([fechaDeIngreso]);
+-- 3. Crear índice Clustered en la columna fechaDeIngreso
+CREATE CLUSTERED INDEX IX_Usuarios_fechaDeIngreso ON [dbo].[Usuarios](fechaDeIngreso);
+GO
 
--- Paso 4: Repetir la consulta de búsqueda y registrar el plan de ejecución
+-- Repetir la consulta y medir rendimiento con índice Clustered en fechaDeIngreso
 SET STATISTICS TIME ON;
 SET STATISTICS IO ON;
-SELECT * FROM [dbo].[Equipos]
-WHERE [fechaDeIngreso] BETWEEN '2024-01-01' AND '2024-12-31';
+SELECT * FROM [dbo].[Usuarios]
+WHERE fechaDeIngreso BETWEEN '2021-01-01' AND '2021-12-31';
 SET STATISTICS TIME OFF;
 SET STATISTICS IO OFF;
+GO
 
--- Paso 5: Borrar el índice agrupado creado
-DROP INDEX IX_FechaDeIngreso ON [dbo].[Equipos];
+--  Borrar el índice Clustered en fechaDeIngreso
+DROP INDEX IX_Usuarios_fechaDeIngreso ON [dbo].[Usuarios];
+GO
 
--- Paso 6: Crear nuevamente el índice agrupado sin usar INCLUDE
--- Crear un índice no agrupado en fechaDeIngreso
+--  Crear otro índice Clustered en fechaDeIngreso con columnas adicionales
+CREATE CLUSTERED INDEX IX_Usuarios_fechaDeIngreso_Incluye ON [dbo].[Usuarios](fechaDeIngreso) INCLUDE (nombre, usuario, correo);
+GO
 
---Crear el nuevo índice agrupado en fechaDeIngreso
-CREATE NONCLUSTERED INDEX IDX_fechaDeIngreso ON [dbo].[Equipos] ([fechaDeIngreso]);
-
-
-
--- Paso 7: Repetir la consulta y registrar el plan de ejecución
+-- Repetir la consulta y medir rendimiento con índice Clustered que incluye columnas
 SET STATISTICS TIME ON;
 SET STATISTICS IO ON;
-SELECT * FROM [dbo].[Equipos]
-WHERE [fechaDeIngreso] BETWEEN '2024-01-01' AND '2024-12-31';
+SELECT nombre, usuario, correo FROM [dbo].[Usuarios]
+WHERE fechaDeIngreso BETWEEN '2021-01-01' AND '2021-12-31';
 SET STATISTICS TIME OFF;
 SET STATISTICS IO OFF;
+GO
+
+--Crea índices adicionales
+
+-- Índice no agrupado en DNI
+CREATE NONCLUSTERED INDEX IX_Usuarios_DNI ON [dbo].[Usuarios](DNI);
+GO
+
+-- Índice único no agrupado en correo
+CREATE UNIQUE NONCLUSTERED INDEX IX_Usuarios_Correo ON [dbo].[Usuarios](correo);
+GO
+
+-- Índice filtrado en usuarios que ingresaron en 2021
+CREATE NONCLUSTERED INDEX IX_Usuarios_Filtro2021 ON [dbo].[Usuarios](fechaDeIngreso) WHERE fechaDeIngreso BETWEEN '2021-01-01' AND '2021-12-31';
+GO
+
+-- Consulta final con los índices creados y registro de estadísticas
+SET STATISTICS TIME ON;
+SET STATISTICS IO ON;
+SELECT nombre, usuario, correo FROM [dbo].[Usuarios]
+WHERE fechaDeIngreso BETWEEN '2021-01-01' AND '2021-12-31';
+SET STATISTICS TIME OFF;
+SET STATISTICS IO OFF;
+GO
