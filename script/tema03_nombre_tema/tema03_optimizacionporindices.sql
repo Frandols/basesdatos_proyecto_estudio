@@ -73,7 +73,9 @@ CREATE UNIQUE NONCLUSTERED INDEX IX_Usuarios_Correo ON [dbo].[Usuarios](correo);
 GO
 
 -- Índice filtrado en usuarios que ingresaron en 2021
-CREATE NONCLUSTERED INDEX IX_Usuarios_Filtro2021 ON [dbo].[Usuarios](fechaDeIngreso) WHERE fechaDeIngreso BETWEEN '2021-01-01' AND '2021-12-31';
+CREATE NONCLUSTERED INDEX IX_Usuarios_Filtro2021 
+ON [dbo].[Usuarios](fechaDeIngreso) 
+WHERE fechaDeIngreso >= '2021-01-01' AND fechaDeIngreso <= '2021-12-31';
 GO
 
 -- Consulta final con los índices creados y registro de estadísticas
