@@ -3,26 +3,23 @@ BEGIN TRY
 
     -- Inserta un registro en la tabla Reparaciones
     INSERT INTO [dbo].[Reparaciones] (idPresupuesto, reparado, observaciones, fechaDeFinalizacion, irreparable)
-    VALUES (1, 1, 'Reparación completada', GETDATE(), 0);
+    VALUES (1021, 1, 'ReparaciÃ³n completada', GETDATE(), 0);
 
-    -- Obtiene el id de la reparación recién insertada
-    DECLARE @idReparacion INT = SCOPE_IDENTITY();
-
-    -- Inserta un registro en la tabla Entregas relacionado con la reparación
+    -- Inserta un registro en la tabla Entregas relacionado con la reparaciÃ³n
     INSERT INTO [dbo].[Entregas] (idReparacion, fecha, idMetodoPago)
-    VALUES (@idReparacion, GETDATE(), 1);
+    VALUES (1021, GETDATE(), 1);
 
     -- Actualiza el estado de baja del equipo relacionado
     UPDATE [dbo].[Equipos]
     SET baja = 'si'
-    WHERE idEquipo = (SELECT idEquipo FROM [dbo].[Revisiones] WHERE idEquipo = (SELECT idEquipo FROM [dbo].[Presupuestos] WHERE idPresupuesto = 1));
+    WHERE idEquipo = (SELECT idEquipo FROM [dbo].[Revisiones] WHERE idEquipo = (SELECT idRevision FROM [dbo].[Presupuestos] WHERE idPresupuesto = 1021));
 
-    -- Confirma la transacción
+    -- Confirma la transacciÃ³n
     COMMIT;
-    PRINT 'Transacción completada con éxito';
+    PRINT 'TransacciÃ³n completada con Ã©xito';
 END TRY
 BEGIN CATCH
     -- Realiza un rollback si hay un error
     ROLLBACK;
-    PRINT 'Ocurrió un error. Se realizó un rollback de la transacción';
+    PRINT 'OcurriÃ³ un error. Se realizÃ³ un rollback de la transacciÃ³n';
 END CATCH;
