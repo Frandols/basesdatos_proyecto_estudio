@@ -1,6 +1,6 @@
 -- Eliminar índices existentes si no son necesarios
---DROP INDEX IF EXISTS IX_Usuarios_DNI ON dbo.Usuarios;
---DROP INDEX IF EXISTS IX_Usuarios_Correo ON dbo.Usuarios;
+DROP INDEX IF EXISTS IX_Usuarios_DNI ON dbo.Usuarios;
+DROP INDEX IF EXISTS IX_Usuarios_Correo ON dbo.Usuarios;
 
 -- carga masiva de datos
 DECLARE @i INT = 0;
@@ -48,6 +48,8 @@ GO
 --  Borrar el índice Clustered en fechaDeIngreso
 DROP INDEX IX_Usuarios_fechaDeIngreso ON [dbo].[Usuarios];
 GO
+
+DROP INDEX IF EXISTS IX_Usuarios_fechaDeIngreso_Incluye ON dbo.Usuarios;
 
 --  Crear otro índice Clustered en fechaDeIngreso con columnas adicionales
 CREATE CLUSTERED INDEX IX_Usuarios_fechaDeIngreso_Incluye ON [dbo].[Usuarios](fechaDeIngreso) INCLUDE (nombre, usuario, correo);
