@@ -1,4 +1,4 @@
-USE [GST_BDD]
+USE [gestion_reparacion_equipos]
 GO
 
 SET ANSI_NULLS ON
@@ -30,9 +30,6 @@ BEGIN
 	INSERT INTO Clientes(DNI, nombres, apellidos, telefono, correo, estado) VALUES (@DNI, @nombres, @apellidos, @telefono, @correo, @estado)
 END
 GO
-
--- codigo para agregar un nuevo cliente
--- EXEC [dbo].[agregar_cliente] @DNI = '12345678', @nombres = 'Juan', @apellidos = 'Pérez', @telefono = '1234567890', @correo = 'juan.perez@example.com', @estado = 'Activo';
 --==============================================================================================================================================================================
 -- ================================================
 -- Template generated from Template Explorer using:
@@ -75,8 +72,7 @@ BEGIN
     WHERE DNI = @DNI;
 END
 GO
--- codigo que ejecuta la funcion 
---EXEC [dbo].[actualizar_cliente] @DNI = '12345678', @nombres = 'Juan', @apellidos = 'López', @telefono = '9876543210', @correo = 'juan.lopez@example.com', @estado = 'Activo';
+
 --===================================================================================================================================================================================
 -- ================================================
 -- Template generated from Template Explorer using:
@@ -108,8 +104,5 @@ BEGIN
     WHERE DNI = @DNI;
 END
 GO
-
--- codigo para borrar un cliente
--- EXEC [dbo].[borrar_cliente] @DNI = '12345678';
 
 
