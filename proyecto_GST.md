@@ -144,13 +144,13 @@ Existen distintos tipos de permisos que pueden ser otorgados a nivel de distinto
 - Se puede encapsular operaciones comunes en la base de datos dentro de un proceso similar para evitar escribir el código repetidas veces en diferentes partes de una aplicación.
 
 **Trafico de red reducido** 
-- Se refiere a que usar los procedimientos almacenados, el cliente, solo envía una llamada única al procedimiento almacenado en el servidor, en lugar de enviar múltiples comandos SQL individuales.
+- Se refiere a que usar los procedimientos y las funciones almacenadas, el cliente, solo envía una llamada única al procedimiento almacenado en el servidor, en lugar de enviar múltiples comandos SQL individuales.
 
 **Simple mantenimiento** 
-- Si necesitas modificar algo en la lógica de una operación, lo cambias solo una vez dentro de la función almacenada. Seguís llamando al mismo procedimiento sin tener que preocuparte por la lógica interna. Esto hace que el mantenimiento sea más sencillo, ya que solo se cambia la base de datos y no el código de la aplicación.
+- Si necesitas modificar algo en la lógica de una operación, lo cambias solo una vez dentro de la función o el procedimiento. Seguís llamando al mismo procedimiento o función sin tener que preocuparte por la lógica interna. Esto hace que el mantenimiento sea más sencillo, ya que solo se cambia la base de datos y no el código de la aplicación.
 
 **Rendimiento mejorado**
-- De forma predeterminada, un procedimiento se compila la primera vez que se ejecuta y crea un plan de ejecución que vuelve a usarse en posteriores ejecuciones. Como el procesador de consultas no tiene que crear un nuevo plan, normalmente necesita menos tiempo para procesar el procedimiento.
+- De forma predeterminada, un procedimiento o una función se compila la primera vez que se ejecuta y crea un plan de ejecución que vuelve a usarse en posteriores ejecuciones. Como el procesador de consultas no tiene que crear un nuevo plan, normalmente necesita menos tiempo para procesarlo.
 
 ### **TEMA 3 "Optimización de Consultas a través de índices"**
 En SQLSERVER, los índices representan una herramienta eficaz que se utilizan para mejorar la eficiencia de las consultas a una tabla. Estos contienen copias de los datos de la tabla, organizados de una manera tal que permite que las consultas encuentren los datos de manera más rápida. Los índices son importantes en las bases de datos relacionales grandes, donde las consultas pueden ser muy complejas y los tiempos de respuestas de la consulta pueden ser críticos. Al agregar índices, se puede acelerar el proceso de recuperación de datos y mejorar el rendimiento de la base de datos.
