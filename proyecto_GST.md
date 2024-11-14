@@ -244,6 +244,11 @@ En esta sección se colocará un documento el cual se enseña como crear funcion
 
 ### Desarrollo TEMA 3 "Optimización de Consultas a través de índices"
 
+Aqui se desarrolla el tema "Optimización de Consultas a través de índices".
+
+> Acceder a la siguiente carpeta para la descripción completa del tema [scripts-> tema_3](script/tema03_nombre_tema)
+
+
 ### Desarrollo TEMA 4 "Transacciones y transacciones anidadas"
 
 Aqui se desarrolla el tema "Transacciones y transacciones anidadas".
