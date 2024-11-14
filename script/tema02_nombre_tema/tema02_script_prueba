@@ -1,0 +1,13 @@
+SELECT dbo.devolver_estado_equipo('SN123456') as 'Estado'
+
+SELECT * FROM Equipos
+
+SELECT dbo.contar_equipos_entregados() AS 'Equipos entregados'
+
+SELECT * FROM dbo.obtener_nombre_y_estado_cliente('12345678')
+
+SELECT * FROM Clientes
+
+EXEC [dbo].[agregar_cliente] @DNI = '99999999', @nombres = 'Theo', @apellidos = 'Echeverria', @telefono = '1234567890', @correo = 'juan.perez@example.com', @estado = 'Activo';
+EXEC [dbo].[actualizar_cliente] @DNI = '99999999', @nombres = 'Theo', @apellidos = 'Estigarribia', @telefono = '9876543210', @correo = 'juan.lopez@example.com', @estado = 'Activo';
+EXEC [dbo].[borrar_cliente] @DNI = '99999999';
